@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /*?*
 
-Sitemap: https://dubaiexpatguide.com/sitemap-index.xml
+Sitemap: https://arabiaexpat.com/sitemap-index.xml

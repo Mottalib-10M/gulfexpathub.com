@@ -1,6 +1,6 @@
 export const SITE = {
-  name: "Dubai Expat Guide",
-  url: "https://dubaiexpatguide.com",
+  name: "Arabia Expat",
+  url: "https://arabiaexpat.com",
   description: "Your complete guide to living in the Gulf as an expat. Visa guides, daily life, housing, healthcare, schools, utilities, and relocation resources for the UAE, Qatar, and Saudi Arabia.",
   author: {
     name: "Mottalib Radif",

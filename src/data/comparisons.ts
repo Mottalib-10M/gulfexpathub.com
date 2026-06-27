@@ -60,7 +60,7 @@ export const comparisons: ComparisonData[] = [
       { label: "Saudi Salary Calculator", href: "https://taxfreesalaries.com/saudi-arabia/salary-calculator/" },
       { label: "UAE Cost of Living", href: "/uae/cost-of-living/" },
     ],
-    breadcrumbs: [{ name: "Home", url: "https://dubaiexpatguide.com/" }, { name: "Compare", url: "https://dubaiexpatguide.com/compare/uae-vs-saudi-arabia/" }, { name: "UAE vs Saudi Arabia", url: "https://dubaiexpatguide.com/compare/uae-vs-saudi-arabia/" }],
+    breadcrumbs: [{ name: "Home", url: "https://arabiaexpat.com/" }, { name: "Compare", url: "https://arabiaexpat.com/compare/uae-vs-saudi-arabia/" }, { name: "UAE vs Saudi Arabia", url: "https://arabiaexpat.com/compare/uae-vs-saudi-arabia/" }],
   },
   {
     slug: "uae-vs-qatar",
@@ -97,7 +97,7 @@ export const comparisons: ComparisonData[] = [
       { label: "Qatar Cost of Living", href: "/qatar/cost-of-living/" },
       { label: "Qatar Salary Calculator", href: "https://taxfreesalaries.com/qatar/salary-calculator/" },
     ],
-    breadcrumbs: [{ name: "Home", url: "https://dubaiexpatguide.com/" }, { name: "Compare", url: "https://dubaiexpatguide.com/compare/uae-vs-qatar/" }, { name: "UAE vs Qatar", url: "https://dubaiexpatguide.com/compare/uae-vs-qatar/" }],
+    breadcrumbs: [{ name: "Home", url: "https://arabiaexpat.com/" }, { name: "Compare", url: "https://arabiaexpat.com/compare/uae-vs-qatar/" }, { name: "UAE vs Qatar", url: "https://arabiaexpat.com/compare/uae-vs-qatar/" }],
   },
   {
     slug: "qatar-vs-saudi-arabia",
@@ -134,7 +134,7 @@ export const comparisons: ComparisonData[] = [
       { label: "Saudi Arabia Salaries 2026", href: "https://taxfreesalaries.com/saudi-arabia/salaries/" },
       { label: "Saudi Gratuity Calculator", href: "https://taxfreesalaries.com/saudi-arabia/gratuity-calculator/" },
     ],
-    breadcrumbs: [{ name: "Home", url: "https://dubaiexpatguide.com/" }, { name: "Compare", url: "https://dubaiexpatguide.com/compare/qatar-vs-saudi-arabia/" }, { name: "Qatar vs Saudi Arabia", url: "https://dubaiexpatguide.com/compare/qatar-vs-saudi-arabia/" }],
+    breadcrumbs: [{ name: "Home", url: "https://arabiaexpat.com/" }, { name: "Compare", url: "https://arabiaexpat.com/compare/qatar-vs-saudi-arabia/" }, { name: "Qatar vs Saudi Arabia", url: "https://arabiaexpat.com/compare/qatar-vs-saudi-arabia/" }],
   },
   {
     slug: "dubai-vs-abu-dhabi",
@@ -171,7 +171,7 @@ export const comparisons: ComparisonData[] = [
       { label: "UAE Cost of Living", href: "/uae/cost-of-living/" },
       { label: "UAE Salary Calculator", href: "https://taxfreesalaries.com/uae/salary-calculator/" },
     ],
-    breadcrumbs: [{ name: "Home", url: "https://dubaiexpatguide.com/" }, { name: "UAE", url: "https://dubaiexpatguide.com/uae/guide/" }, { name: "Dubai vs Abu Dhabi", url: "https://dubaiexpatguide.com/compare/dubai-vs-abu-dhabi/" }],
+    breadcrumbs: [{ name: "Home", url: "https://arabiaexpat.com/" }, { name: "UAE", url: "https://arabiaexpat.com/uae/guide/" }, { name: "Dubai vs Abu Dhabi", url: "https://arabiaexpat.com/compare/dubai-vs-abu-dhabi/" }],
   },
   {
     slug: "riyadh-vs-jeddah",
@@ -208,7 +208,7 @@ export const comparisons: ComparisonData[] = [
       { label: "Saudi Arabia Cost of Living", href: "/saudi-arabia/cost-of-living/" },
       { label: "Saudi Salary Calculator", href: "https://taxfreesalaries.com/saudi-arabia/salary-calculator/" },
     ],
-    breadcrumbs: [{ name: "Home", url: "https://dubaiexpatguide.com/" }, { name: "Saudi Arabia", url: "https://dubaiexpatguide.com/saudi-arabia/guide/" }, { name: "Riyadh vs Jeddah", url: "https://dubaiexpatguide.com/compare/riyadh-vs-jeddah/" }],
+    breadcrumbs: [{ name: "Home", url: "https://arabiaexpat.com/" }, { name: "Saudi Arabia", url: "https://arabiaexpat.com/saudi-arabia/guide/" }, { name: "Riyadh vs Jeddah", url: "https://arabiaexpat.com/compare/riyadh-vs-jeddah/" }],
   },
   {
     slug: "dubai-vs-doha",
@@ -245,7 +245,7 @@ export const comparisons: ComparisonData[] = [
       { label: "UAE Salary Calculator", href: "https://taxfreesalaries.com/uae/salary-calculator/" },
       { label: "Qatar Salary Calculator", href: "https://taxfreesalaries.com/qatar/salary-calculator/" },
     ],
-    breadcrumbs: [{ name: "Home", url: "https://dubaiexpatguide.com/" }, { name: "Compare", url: "https://dubaiexpatguide.com/compare/dubai-vs-doha/" }, { name: "Dubai vs Doha", url: "https://dubaiexpatguide.com/compare/dubai-vs-doha/" }],
+    breadcrumbs: [{ name: "Home", url: "https://arabiaexpat.com/" }, { name: "Compare", url: "https://arabiaexpat.com/compare/dubai-vs-doha/" }, { name: "Dubai vs Doha", url: "https://arabiaexpat.com/compare/dubai-vs-doha/" }],
   },
   {
     slug: "dubai-vs-riyadh",
@@ -282,7 +282,7 @@ export const comparisons: ComparisonData[] = [
       { label: "UAE Salary Calculator", href: "https://taxfreesalaries.com/uae/salary-calculator/" },
       { label: "Saudi Cost of Living", href: "/saudi-arabia/cost-of-living/" },
     ],
-    breadcrumbs: [{ name: "Home", url: "https://dubaiexpatguide.com/" }, { name: "Compare", url: "https://dubaiexpatguide.com/compare/dubai-vs-riyadh/" }, { name: "Dubai vs Riyadh", url: "https://dubaiexpatguide.com/compare/dubai-vs-riyadh/" }],
+    breadcrumbs: [{ name: "Home", url: "https://arabiaexpat.com/" }, { name: "Compare", url: "https://arabiaexpat.com/compare/dubai-vs-riyadh/" }, { name: "Dubai vs Riyadh", url: "https://arabiaexpat.com/compare/dubai-vs-riyadh/" }],
   },
   {
     slug: "abu-dhabi-vs-doha",
@@ -319,7 +319,7 @@ export const comparisons: ComparisonData[] = [
       { label: "UAE Cost of Living", href: "/uae/cost-of-living/" },
       { label: "Qatar Cost of Living", href: "/qatar/cost-of-living/" },
     ],
-    breadcrumbs: [{ name: "Home", url: "https://dubaiexpatguide.com/" }, { name: "Compare", url: "https://dubaiexpatguide.com/compare/abu-dhabi-vs-doha/" }, { name: "Abu Dhabi vs Doha", url: "https://dubaiexpatguide.com/compare/abu-dhabi-vs-doha/" }],
+    breadcrumbs: [{ name: "Home", url: "https://arabiaexpat.com/" }, { name: "Compare", url: "https://arabiaexpat.com/compare/abu-dhabi-vs-doha/" }, { name: "Abu Dhabi vs Doha", url: "https://arabiaexpat.com/compare/abu-dhabi-vs-doha/" }],
   },
   {
     slug: "saudi-arabia-vs-qatar-salaries",
@@ -356,7 +356,7 @@ export const comparisons: ComparisonData[] = [
       { label: "Qatar Gratuity Calculator", href: "https://taxfreesalaries.com/qatar/gratuity-calculator/" },
       { label: "Global Salary Comparison", href: "https://taxfreesalaries.com/salaries/" },
     ],
-    breadcrumbs: [{ name: "Home", url: "https://dubaiexpatguide.com/" }, { name: "Compare", url: "https://dubaiexpatguide.com/compare/saudi-arabia-vs-qatar-salaries/" }, { name: "Saudi vs Qatar Salaries", url: "https://dubaiexpatguide.com/compare/saudi-arabia-vs-qatar-salaries/" }],
+    breadcrumbs: [{ name: "Home", url: "https://arabiaexpat.com/" }, { name: "Compare", url: "https://arabiaexpat.com/compare/saudi-arabia-vs-qatar-salaries/" }, { name: "Saudi vs Qatar Salaries", url: "https://arabiaexpat.com/compare/saudi-arabia-vs-qatar-salaries/" }],
   },
   {
     slug: "uae-vs-qatar-cost-of-living",
@@ -393,6 +393,6 @@ export const comparisons: ComparisonData[] = [
       { label: "UAE Salary Calculator", href: "https://taxfreesalaries.com/uae/salary-calculator/" },
       { label: "Qatar Salary Calculator", href: "https://taxfreesalaries.com/qatar/salary-calculator/" },
     ],
-    breadcrumbs: [{ name: "Home", url: "https://dubaiexpatguide.com/" }, { name: "Compare", url: "https://dubaiexpatguide.com/compare/uae-vs-qatar-cost-of-living/" }, { name: "UAE vs Qatar Cost of Living", url: "https://dubaiexpatguide.com/compare/uae-vs-qatar-cost-of-living/" }],
+    breadcrumbs: [{ name: "Home", url: "https://arabiaexpat.com/" }, { name: "Compare", url: "https://arabiaexpat.com/compare/uae-vs-qatar-cost-of-living/" }, { name: "UAE vs Qatar Cost of Living", url: "https://arabiaexpat.com/compare/uae-vs-qatar-cost-of-living/" }],
   },
 ];

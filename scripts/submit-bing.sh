@@ -7,7 +7,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 [ -f "$SCRIPT_DIR/.env" ] && source "$SCRIPT_DIR/.env"
 
-DOMAIN="https://dubaiexpatguide.com"
+DOMAIN="https://arabiaexpat.com"
 API_KEY="${BING_API_KEY:?Error: Set BING_API_KEY in scripts/.env or environment}"
 
 echo "Fetching sitemap..."
