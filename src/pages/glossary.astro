@@ -1,0 +1,100 @@
+---
+import GuideLayout from "../layouts/GuideLayout.astro";
+import { SITE } from "../data/site-config";
+import { buildBreadcrumbs } from "../lib/seo";
+
+const title = "Gulf Expat Glossary: Employment and Relocation Terms";
+const description = "Glossary of Gulf expat employment and relocation terms. Definitions of expat package, COLA, dependent visa, labour ban, probation period, and relocation concepts.";
+const canonical = "/glossary/";
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Glossary", url: "/glossary/" },
+];
+
+const defined = (term: string, def: string) => ({ term, def });
+
+const terms = [
+  defined("Absconding", "A legal status applied when an employee leaves their employer without following proper resignation procedures. In the GCC, absconding is reported to immigration authorities and can result in a labour ban, fines, and deportation. Employees accused of absconding may have difficulty obtaining future work permits in the region."),
+  defined("Annual Leave Entitlement", "The number of paid vacation days an employee is legally entitled to per year under labour law. In the UAE, employees receive 30 calendar days after completing one year of service. Saudi Arabia provides 21 days increasing to 30 after five years, and Qatar grants a minimum of three weeks annually."),
+  defined("Cost of Living Adjustment (COLA)", "An additional allowance included in some expat packages to compensate for the higher cost of living in certain Gulf cities. COLA is calculated based on comparative indices between the employee's home country and the assignment location, covering differences in housing, food, transport, and general goods prices."),
+  defined("Dependent Visa", "A residence visa that allows an expatriate worker to sponsor family members (spouse, children, and in some cases parents) to live in the GCC country. The sponsoring employee must typically meet a minimum salary threshold. In the UAE, the current minimum is AED 4,000 per month plus accommodation, or AED 3,000 with employer-provided housing."),
+  defined("Expat Package", "A comprehensive compensation offer extended to expatriate employees relocating to the Gulf. A typical expat package includes basic salary, housing allowance, transportation allowance, annual flights home, health insurance, education allowance for children, and end-of-service gratuity. Packages vary significantly by employer, seniority, and nationality."),
+  defined("Final Settlement", "The total amount owed to an employee upon termination of employment. It includes unpaid salary, accrued but unused annual leave, end-of-service gratuity, repatriation flight costs, and any other contractual entitlements. In the UAE, employers must pay the final settlement within 14 days of the last working day."),
+  defined("Hardship Allowance", "An additional payment offered to expats assigned to locations considered particularly challenging due to climate, remoteness, security conditions, or limited amenities. Hardship allowances are more common for assignments outside major cities and in industrial or remote project sites across the Gulf region."),
+  defined("Health Insurance Card", "A mandatory health insurance identification card required for all residents in certain GCC countries. In Abu Dhabi and Dubai, employers must provide health insurance to all employees and their dependants. The card allows access to approved hospitals and clinics within the insurance network."),
+  defined("Labour Ban", "A restriction imposed by immigration authorities that prevents an employee from obtaining a new work permit in the same country for a specified period. Bans may result from absconding, contract violations, or non-completion of a minimum service period. The UAE has significantly reformed its ban system in recent years."),
+  defined("Probation Period", "An initial trial period at the start of employment during which either party can terminate the contract with reduced notice. In the UAE, probation lasts a maximum of six months. During this period, employees are typically not entitled to end-of-service gratuity, and employers may terminate with 14 days written notice."),
+  defined("Repatriation Flight", "An airline ticket provided by the employer to return the employee (and sometimes their dependants) to their home country at the end of the employment contract. Under UAE and Qatar labour law, the employer is responsible for the cost of repatriation unless the employee immediately takes up new employment locally."),
+  defined("Residency Permit", "An official government-issued permit that allows a foreign national to live legally in a GCC country. Residency permits are typically tied to employment and sponsored by the employer. They must be renewed periodically, usually every one to three years, and are cancelled when employment ends."),
+  defined("Sick Leave", "Paid or partially paid leave granted when an employee is medically unfit to work, supported by a medical certificate. In the UAE, employees receive 90 days per year: 15 days at full pay, 30 days at half pay, and 45 days unpaid. Other GCC countries have similar graduated structures."),
+];
+
+const letters = [...new Set(terms.map(t => t.term[0].toUpperCase()))].sort();
+
+const definedTermSetSchema = {
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  "name": title,
+  "description": description,
+  "url": `${SITE.url}/glossary/`,
+  "inLanguage": "en",
+  "hasDefinedTerm": terms.map(t => ({
+    "@type": "DefinedTerm",
+    "name": t.term,
+    "description": t.def,
+  })),
+};
+
+const schemas = [
+  definedTermSetSchema,
+  buildBreadcrumbs([
+    { name: "Home", url: SITE.url + "/" },
+    { name: "Glossary", url: SITE.url + "/glossary/" },
+  ]),
+];
+---
+
+<GuideLayout
+  title={title}
+  description={description}
+  canonical={canonical}
+  schemas={schemas}
+  breadcrumbs={breadcrumbs}
+>
+  <h1>Gulf Expat Glossary</h1>
+  <p class="lead">Key employment, compensation, and relocation terms for expatriates working in the UAE, Qatar, and Saudi Arabia.</p>
+
+  <nav aria-label="Alphabetical navigation" class="not-prose mb-8 flex flex-wrap gap-2">
+    {letters.map(letter => (
+      <a href={`#letter-${letter}`} class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm font-semibold text-gray-700 dark:text-gray-300 hover:bg-teal-50 dark:hover:bg-teal-900/20 hover:border-teal-400 transition-colors">
+        {letter}
+      </a>
+    ))}
+  </nav>
+
+  {letters.map(letter => {
+    const letterTerms = terms.filter(t => t.term[0].toUpperCase() === letter);
+    return (
+      <section id={`letter-${letter}`} class="scroll-mt-20">
+        <h2>{letter}</h2>
+        <dl class="not-prose space-y-6 mb-8">
+          {letterTerms.map(t => (
+            <div>
+              <dt class="text-lg font-semibold text-gray-900 dark:text-gray-100">{t.term}</dt>
+              <dd class="mt-1 text-gray-600 dark:text-gray-400 leading-relaxed">{t.def}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+    );
+  })}
+
+  <h2>Related Resources</h2>
+  <ul>
+    <li><a href="/uae/guide/">UAE Expat Guide 2026</a></li>
+    <li><a href="/saudi-arabia/guide/">Saudi Arabia Expat Guide 2026</a></li>
+    <li><a href="/qatar/guide/">Qatar Expat Guide 2026</a></li>
+    <li><a href="/calculators/">All Calculators</a></li>
+  </ul>
+</GuideLayout>

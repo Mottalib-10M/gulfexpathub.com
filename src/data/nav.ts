@@ -84,6 +84,9 @@ export const footerNav = {
   ],
   legal: [
     { label: "About", href: "/about/" },
+    { label: "Methodology", href: "/methodology/" },
+    { label: "News", href: "/news/" },
+    { label: "Contact", href: "/contact/" },
     { label: "Privacy Policy", href: "/privacy-policy/" },
     { label: "Terms of Use", href: "/terms/" },
   ],

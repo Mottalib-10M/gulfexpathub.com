@@ -1,0 +1,62 @@
+---
+import GuideLayout from "../layouts/GuideLayout.astro";
+import { SITE } from "../data/site-config";
+import { buildBreadcrumbs } from "../lib/seo";
+
+const breadcrumbs = [
+  { name: "Home", url: "https://gulfexpathub.com/" },
+  { name: "Contact", url: "https://gulfexpathub.com/contact/" },
+];
+const schemas = [buildBreadcrumbs(breadcrumbs)];
+---
+
+<GuideLayout
+  title="Contact Us - Gulf Expat Hub | Questions and Support"
+  description="Contact Gulf Expat Hub for questions about Gulf salaries, gratuity calculators, visa guides, and expat resources for the UAE, Qatar, and Saudi Arabia."
+  canonical="/contact/"
+  schemas={schemas}
+  breadcrumbs={[{ name: "Home", url: "/" }, { name: "Contact", url: "/contact/" }]}
+>
+  <h1>Contact Us</h1>
+
+  <p>Have a question about our salary data, gratuity calculators, visa guides, or expat resources? The Gulf Expat Hub team welcomes your feedback. Accuracy is our top priority, and your input helps us maintain the most reliable expat resource for the Gulf region.</p>
+
+  <h2>Email Us</h2>
+
+  <p>The most effective way to reach us is by email:</p>
+
+  <p><strong><a href="mailto:contact@gulfexpathub.com">contact@gulfexpathub.com</a></strong></p>
+
+  <p>We aim to respond to all enquiries within <strong>48 working hours</strong>. Messages received over weekends or public holidays will be addressed on the next working day.</p>
+
+  <h2>When to Contact Us</h2>
+
+  <ul>
+    <li><strong>Data corrections:</strong> if you notice an incorrect salary range, outdated labour law provision, or inaccurate gratuity calculation, please let us know with the specific page URL and your source reference.</li>
+    <li><strong>Regulatory updates:</strong> if a country has amended its labour law, visa rules, or gratuity regulations and our content does not yet reflect these changes.</li>
+    <li><strong>Content suggestions:</strong> if you would like us to cover a new country, profession, or topic relevant to Gulf expats.</li>
+    <li><strong>Calculator issues:</strong> if a calculator produces unexpected results or if you believe the underlying formula does not match the relevant country's labour law.</li>
+  </ul>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <h3>Is Gulf Expat Hub an official government resource?</h3>
+  <p>No. Gulf Expat Hub is an independent informational website. We are not affiliated with any government ministry or employer. Our data is sourced from official government publications, recruitment platform surveys, and industry reports. For official employment matters, refer directly to <a href="https://www.mohre.gov.ae" target="_blank" rel="noopener noreferrer">MoHRE</a> (UAE), <a href="https://hrsd.gov.sa" target="_blank" rel="noopener noreferrer">MHRSD</a> (Saudi Arabia), or <a href="https://www.adlsa.gov.qa" target="_blank" rel="noopener noreferrer">MADLSA</a> (Qatar).</p>
+
+  <h3>Is my data collected when I use your calculators?</h3>
+  <p>No. All calculations are performed entirely in your browser. No salary, personal, or financial data entered into our tools is transmitted to any server. Your financial data stays private. See our <a href="/privacy-policy/">Privacy Policy</a> for full details.</p>
+
+  <h3>Can you help me find a job or sponsor my visa?</h3>
+  <p>Gulf Expat Hub is an informational resource, not a recruitment agency or visa sponsor. We do not post job listings, process applications, or provide visa sponsorship. For job searches, we recommend platforms such as <a href="https://www.bayt.com" target="_blank" rel="noopener noreferrer">Bayt.com</a>, <a href="https://www.gulftalent.com" target="_blank" rel="noopener noreferrer">GulfTalent</a>, and LinkedIn. For visa matters, consult the relevant government immigration authority or a licensed immigration consultant.</p>
+
+  <h3>Are your salary figures guaranteed?</h3>
+  <p>No. Salary ranges on Gulf Expat Hub are indicative and based on aggregated data from multiple sources including recruitment platforms and industry surveys. Individual salaries depend on many factors including specific employer, negotiation, qualifications, and market conditions. Our figures serve as a research starting point, not a guarantee.</p>
+
+  <h2>Disclaimer</h2>
+
+  <p>Gulf Expat Hub does not provide personalised legal, financial, or immigration advice. The information and calculator results on this site are provided for general informational and educational purposes only. Laws and regulations change, and individual circumstances vary. For decisions involving employment contracts, end-of-service benefits, visa matters, or financial planning, we recommend consulting with qualified professionals (lawyers, accountants, immigration consultants) with expertise in the relevant country. Please review our <a href="/terms/">Terms of Use</a> for complete disclaimers.</p>
+
+  <h2>About the Author</h2>
+
+  <p>Gulf Expat Hub is founded and maintained by <strong>Mottalib Radif, MBA INSEAD</strong>. For more details about our methodology, data sources, and editorial independence, visit our <a href="/about/">About page</a>.</p>
+</GuideLayout>

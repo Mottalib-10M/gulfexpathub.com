@@ -19,7 +19,19 @@ const faqs = [
   { question: "What is the cost of living in Dubai compared to Riyadh and Doha?", answer: "Dubai is the most expensive: a one-bedroom apartment costs AED 7,000-10,000/month. Riyadh is 20-30% cheaper at SAR 2,500-5,000/month. Doha falls in between at QAR 4,500-7,500/month. Groceries, dining, and transport follow similar patterns. Dubai has 5% VAT, Saudi has 15% VAT, and Qatar has no VAT." },
 ];
 
-const schemas = [buildOrganizationSchema(), buildWebSiteSchema(), buildFAQSchema(faqs)];
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mottalib Radif",
+  "jobTitle": "Personal Finance Expert",
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "INSEAD"
+  },
+  "url": "https://gulfexpathub.com/about/"
+};
+
+const schemas = [buildOrganizationSchema(), buildWebSiteSchema(), buildFAQSchema(faqs), personSchema];
 ---
 
 <Layout
