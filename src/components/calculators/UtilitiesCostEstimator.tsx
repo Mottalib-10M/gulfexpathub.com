@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { formatCurrency } from "../../lib/format";
+import { formatWithEUR } from "../../lib/format";
 
 interface Props {
   countryKey: "uae" | "qatar" | "saudi";
@@ -96,25 +96,25 @@ export default function UtilitiesCostEstimator({ countryKey, currency }: Props) 
       <div className="space-y-2 mb-3">
         <div className="flex justify-between text-sm">
           <span className="text-gray-600 dark:text-gray-400">Electricity & Water</span>
-          <span className="tabular-nums font-medium text-gray-900 dark:text-white">{formatCurrency(breakdown.elecWater, currency)}</span>
+          <span className="tabular-nums font-medium text-gray-900 dark:text-white">{formatWithEUR(breakdown.elecWater, currency)}</span>
         </div>
         <div className="flex justify-between text-sm">
           <span className="text-gray-600 dark:text-gray-400">Internet</span>
-          <span className="tabular-nums font-medium text-gray-900 dark:text-white">{formatCurrency(breakdown.internet, currency)}</span>
+          <span className="tabular-nums font-medium text-gray-900 dark:text-white">{formatWithEUR(breakdown.internet, currency)}</span>
         </div>
         <div className="flex justify-between text-sm">
           <span className="text-gray-600 dark:text-gray-400">Mobile (avg plan)</span>
-          <span className="tabular-nums font-medium text-gray-900 dark:text-white">{formatCurrency(breakdown.mobile, currency)}</span>
+          <span className="tabular-nums font-medium text-gray-900 dark:text-white">{formatWithEUR(breakdown.mobile, currency)}</span>
         </div>
       </div>
       <div className="flex items-baseline justify-between p-3 bg-teal-50 dark:bg-teal-900/20 rounded-lg">
         <div>
           <p className="text-xs text-gray-500 dark:text-gray-400">Total monthly utilities</p>
-          <p className="text-lg font-bold text-teal-600 dark:text-teal-400 tabular-nums">{formatCurrency(breakdown.total, currency)}</p>
+          <p className="text-lg font-bold text-teal-600 dark:text-teal-400 tabular-nums">{formatWithEUR(breakdown.total, currency)}</p>
         </div>
         <div className="text-right">
           <p className="text-xs text-gray-500 dark:text-gray-400">Annual</p>
-          <p className="text-lg font-bold text-gray-900 dark:text-white tabular-nums">{formatCurrency(breakdown.total * 12, currency)}</p>
+          <p className="text-lg font-bold text-gray-900 dark:text-white tabular-nums">{formatWithEUR(breakdown.total * 12, currency)}</p>
         </div>
       </div>
       <p className="mt-2 text-xs text-gray-500 dark:text-gray-500">Summer months (May-Oct) typically add 30-50% to electricity costs due to air conditioning.</p>

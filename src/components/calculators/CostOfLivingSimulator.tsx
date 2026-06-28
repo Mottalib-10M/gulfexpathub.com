@@ -9,7 +9,7 @@ import {
   type HealthcareTier,
   type Lifestyle,
 } from "../../lib/cost-simulator-engine";
-import { formatCurrency, formatUSD, formatPercent } from "../../lib/format";
+import { formatWithEUR, formatUSD, formatPercent } from "../../lib/format";
 import { decodeState, updateURL } from "../../lib/url-state";
 import ShareButtons from "./ShareButtons";
 
@@ -82,7 +82,7 @@ export default function CostOfLivingSimulator({ defaultCity, defaultOrigin }: Pr
   }, [citySlug, housing, transport, healthcare, children, lifestyle, originSlug, result]);
 
   const shareText = result
-    ? `My estimated monthly cost of living in ${result.cityName}: ${formatCurrency(result.total, result.currency)}. Calculate yours:`
+    ? `My estimated monthly cost of living in ${result.cityName}: ${formatWithEUR(result.total, result.currency)}. Calculate yours:`
     : "";
 
   const breakdownRows = result
@@ -163,7 +163,7 @@ export default function CostOfLivingSimulator({ defaultCity, defaultOrigin }: Pr
             <div>
               <p className="text-xs text-gray-500 dark:text-gray-400">Estimated monthly cost in {result.cityName}</p>
               <p className="text-2xl font-bold text-teal-600 dark:text-teal-400 tabular-nums">
-                {formatCurrency(result.total, result.currency)}
+                {formatWithEUR(result.total, result.currency)}
               </p>
             </div>
             {comparison && (
@@ -189,7 +189,7 @@ export default function CostOfLivingSimulator({ defaultCity, defaultOrigin }: Pr
                     <div className={`h-full rounded-full ${row.color}`} style={{ width: `${Math.min(pct, 100)}%` }} />
                   </div>
                   <span className="w-24 text-right tabular-nums font-medium text-gray-900 dark:text-white">
-                    {formatCurrency(row.value, result.currency)}
+                    {formatWithEUR(row.value, result.currency)}
                   </span>
                 </div>
               );

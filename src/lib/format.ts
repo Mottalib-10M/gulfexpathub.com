@@ -10,6 +10,20 @@ export function formatUSD(amount: number): string {
   return `$${amount.toLocaleString("en-US", { minimumFractionDigits: 0, maximumFractionDigits: 0 })}`;
 }
 
+const eurRates: Record<string, number> = { AED: 0.25, QAR: 0.25, SAR: 0.24 };
+
+export function toEUR(amount: number, currency: string): number {
+  return Math.round(amount * (eurRates[currency] ?? 0.25));
+}
+
+export function formatWithEUR(amount: number, currency: string): string {
+  return `${formatCurrency(amount, currency)} (~€${toEUR(amount, currency).toLocaleString("en-US")})`;
+}
+
+export function formatDetailedWithEUR(amount: number, currency: string): string {
+  return `${formatCurrencyDetailed(amount, currency)} (~€${toEUR(amount, currency).toLocaleString("en-US")})`;
+}
+
 export function formatPercent(rate: number): string {
   return `${(rate * 100).toFixed(1)}%`;
 }

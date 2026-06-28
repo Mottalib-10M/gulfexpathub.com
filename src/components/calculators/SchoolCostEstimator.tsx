@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { formatCurrency } from "../../lib/format";
+import { formatWithEUR } from "../../lib/format";
 
 interface Props {
   countryKey: "uae" | "qatar" | "saudi";
@@ -81,18 +81,18 @@ export default function SchoolCostEstimator({ countryKey, currency }: Props) {
       <div className="flex items-baseline justify-between p-3 bg-teal-50 dark:bg-teal-900/20 rounded-lg">
         <div>
           <p className="text-xs text-gray-500 dark:text-gray-400">Annual per child</p>
-          <p className="text-lg font-bold text-gray-900 dark:text-white tabular-nums">{formatCurrency(annualPerChild, currency)}</p>
+          <p className="text-lg font-bold text-gray-900 dark:text-white tabular-nums">{formatWithEUR(annualPerChild, currency)}</p>
         </div>
         {numChildren > 1 && (
           <div className="text-right">
             <p className="text-xs text-gray-500 dark:text-gray-400">Total ({numChildren} children)</p>
-            <p className="text-lg font-bold text-teal-600 dark:text-teal-400 tabular-nums">{formatCurrency(totalAnnual, currency)}</p>
+            <p className="text-lg font-bold text-teal-600 dark:text-teal-400 tabular-nums">{formatWithEUR(totalAnnual, currency)}</p>
           </div>
         )}
         {numChildren === 1 && (
           <div className="text-right">
             <p className="text-xs text-gray-500 dark:text-gray-400">Monthly equiv.</p>
-            <p className="text-lg font-bold text-teal-600 dark:text-teal-400 tabular-nums">{formatCurrency(Math.round(totalAnnual / 12), currency)}</p>
+            <p className="text-lg font-bold text-teal-600 dark:text-teal-400 tabular-nums">{formatWithEUR(Math.round(totalAnnual / 12), currency)}</p>
           </div>
         )}
       </div>
