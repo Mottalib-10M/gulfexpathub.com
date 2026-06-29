@@ -213,7 +213,9 @@ export function simulateCost(input: SimulatorInput): CostBreakdown | null {
 
 export function compareWithOrigin(
   gulfBreakdown: CostBreakdown,
-  originCitySlug: string
+  originCitySlug: string,
+  housing: HousingType = "1br",
+  children: number = 0
 ): ComparisonResult | null {
   initCityMap();
   const entry = cityDataMap[gulfBreakdown.cityName.toLowerCase().replace(/\s+/g, "-")];
@@ -224,13 +226,36 @@ export function compareWithOrigin(
 
   const gulfTotalUSD = gulfBreakdown.total / entry.usdRate;
   const originUSD = originCostToUSD(originCity);
-  const originTotalUSD =
-    originUSD.oneBedroomRent +
+
+  // Match housing type to user's selection
+  let originRent: number;
+  switch (housing) {
+    case "studio":
+      originRent = originUSD.studioRent;
+      break;
+    case "1br":
+      originRent = originUSD.oneBedroomRent;
+      break;
+    default: // 2br, 3br, villa → use 2BR as ceiling
+      originRent = originUSD.twoBedroomRent;
+      break;
+  }
+
+  let originTotalUSD =
+    originRent +
     originUSD.groceries +
+    originUSD.diningOut +
     originUSD.transport +
     originUSD.utilities +
     originUSD.internet +
-    originUSD.healthcare;
+    originUSD.mobile +
+    originUSD.healthcare +
+    originUSD.other;
+
+  // Include education if children selected
+  if (children > 0) {
+    originTotalUSD += (originUSD.schoolAnnual * children) / 12;
+  }
 
   const deltaUSD = gulfTotalUSD - originTotalUSD;
   const deltaPercent = originTotalUSD > 0 ? (deltaUSD / originTotalUSD) : 0;

@@ -71,8 +71,8 @@ export default function CostOfLivingSimulator({ defaultCity, defaultOrigin }: Pr
 
   const comparison = useMemo(() => {
     if (!result || !originSlug) return null;
-    return compareWithOrigin(result, originSlug);
-  }, [result, originSlug]);
+    return compareWithOrigin(result, originSlug, housing, children);
+  }, [result, originSlug, housing, children]);
 
   useEffect(() => {
     if (!result) return;
